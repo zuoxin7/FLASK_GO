@@ -15,39 +15,39 @@ body {
     *zoom: 1;
 }
 
-.container {
+.containered {
     position: relative;
     margin: 0px auto;
     padding: 50px 0;
     clear: both;
 }
 @media only screen and (min-width: 1200px) {
-    .container {
+    .containered {
         width: 1210px;
     }
 }
 
 @media only screen and (min-width: 960px) and (max-width: 1199px) {
-    .container {
+    .containered {
         width: 1030px;
     }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 959px) {
-    .container {
+    .containered {
         width: 682px;
     }
 }
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
-    .container {
+    .containered {
         width: 428px;
         margin: 0 auto;
     }
 }
 
 @media only screen and (max-width: 479px) {
-    .container {
+    .containered {
         width: 320px;
         margin: 0 auto;
     }
@@ -83,7 +83,7 @@ body {
   
   /* == */
   text-align: left;
-  height: 36px;
+  /*height: 80px;*/
   position: relative;
   border-bottom: 1px solid #EEE;
   /* == */
