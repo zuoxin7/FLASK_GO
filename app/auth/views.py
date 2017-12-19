@@ -37,12 +37,7 @@ def register():
     if form.validate_on_submit():
         user = User(email=form.email.data,
                     username=form.username.data,
-                    password=form.password.data,
-                    phone=form.phone.data,
-                    pay=form.pay.data,
-                    academy=form.academy.data,
-                    grade=form.grade.data,
-                    major=form.major.data)
+                    password=form.password.data)
         user.save()
         flash('你现在可以登录了')
         return redirect(url_for('auth.login'))
