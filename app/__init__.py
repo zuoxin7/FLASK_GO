@@ -41,4 +41,7 @@ def create_app(config_name):
     from .new import new as new_blueprint
     app.register_blueprint(new_blueprint)
 
+    from .video import video as video_blueprint
+    app.register_blueprint(video_blueprint)
+
     return app

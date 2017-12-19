@@ -4,6 +4,6 @@ from . import video
 from ..models import User, Post
 
 
-@video.route('/new', methods=['GET', 'POST'])
+@video.route('/video', methods=['GET', 'POST'])
 def video():
     return render_template('video.html')
