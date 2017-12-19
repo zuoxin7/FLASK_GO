@@ -35,4 +35,10 @@ def create_app(config_name):
     from .auth import auth as auth_blueprint
     app.register_blueprint(auth_blueprint)
 
+    from .baike import baike as baike_blueprint
+    app.register_blueprint(baike_blueprint)
+
+    from .new import new as new_blueprint
+    app.register_blueprint(new_blueprint)
+
     return app
