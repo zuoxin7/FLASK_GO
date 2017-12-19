@@ -88,3 +88,12 @@ class Post(db.Model):
 
     class Meta:
         db_table = 'posts'
+
+#
+# class news(db.Model):
+#     title = pw.TextField(null=True)
+#     timestamp = pw.DateTimeField(index=True, default=datetime.utcnow)
+#     author = pw.ForeignKeyField(User, related_name='posts', null=True)
+#
+#     class Meta:
+#         db_table = 'news'
