@@ -7,85 +7,9 @@
     <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}"
           type="image/x-icon">
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
-    <style rel="stylesheet">
-    .clear{clear:both;font-size:0px;line-height:0;height:0;}
-
-@font-face {
-	font-family: 'icomoon';
-    src:url({{ url_for('static', filename='font/icomoon.eot') }}?qradjf);
-    src:url({{ url_for('static', filename='font/icomoon.eot') }}?qradjf#iefix) format('embedded-opentype'),
-        url({{ url_for('static', filename='font/icomoon.ttf') }}?qradjf) format('truetype'),
-        url({{ url_for('static', filename='font/icomoon.woff') }}?qradjf) format('woff'),
-        url({{ url_for('static', filename='font/icomoon.svg') }}?qradjf#icomoon) format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-.demo-icon{
-  font-family:"icomoon";
-  font-style:normal;
-  font-weight:normal;
-  speak:none;
-  display:inline-block;
-  text-decoration:inherit;
-  text-align:center;
-  font-variant:normal;
-  text-transform:none;
-  font-size:24px;
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
-  line-height:24px;
-  color:#999;
-}
-
-/*new right*/
-.cndns-right{position:fixed;right:1px;top:50%;margin-top:-100px;z-index:100}
-.cndns-right-meau{position:relative;}
-.cndns-right-btn{width:48px;height:48px;border:1px solid #ddd;text-align:center;display:block;margin-bottom:6px;position:relative;background-color:#fff}
-.cndns-right-btn span{color:#848484;font-size:26px;line-height:48px;}
-.cndns-right-btn sup{display:block;min-width:24px;height:24px;text-align:center;line-height:24px;color:#fff;border-radius: 50%;background-color:#ff6800;position:absolute;left:-12px;top:-12px;}
-.cndns-right-btn p{color:#ff6800;font-size:14px;line-height:18px;padding-top:5px;display:none;}
-.cndns-right-meau:hover .cndns-right-btn span{display:none}
-.cndns-right-meau:hover .cndns-right-btn p{display:block;}
-.meau-car .cndns-right-btn {border-color:#ff6800;margin-bottom:20px;}
-.meau-car.cndns-right-meau:hover .cndns-right-btn{background-color:#ff6800}
-.meau-car.cndns-right-meau:hover .cndns-right-btn span{color:#fff;display:block;}
-.meau-car .cndns-right-btn span{color:#ff6800;}
-.meau-sev .cndns-right-btn{border-color:#ff6800;background:url(images/02index-banner-8.gif) no-repeat #ff6800 center;}
-.meau-sev .cndns-right-btn p{color:#fff}
-.meau-sev .cndns-right-btn span{color:#fff}
-.meau-top .cndns-right-btn span{font-size:12px;line-height:12px;padding-top:10px;display:block}
-.meau-top .cndns-right-btn i{display:block;color:#999}
-.meau-top.cndns-right-meau:hover .cndns-right-btn{background-color:#ff6800}
-.meau-top.cndns-right-meau:hover .cndns-right-btn span{display:block;color:#fff}
-.meau-top.cndns-right-meau:hover .cndns-right-btn i{color:#fff;}
-.cndns-right-box{position:absolute;top:-15px;right:48px;padding-right:25px;display:none;}
-.cndns-right-box .box-border{border:1px solid #ccc;border-top:4px solid #ff6800;padding:20px;background-color:#fff;-webkit-box-shadow: 0 3px 8px rgba(0,0,0,.15);-moz-box-shadow: 0 3px 8px rgba(0,0,0,.15);box-shadow: 0 3px 8px rgba(0,0,0,.15);position:relative}
-.cndns-right-box .box-border .arrow-right{display:block;width:13px;height:16px;background:url(images/arrow.png) no-repeat;position:absolute;right:-13px;top:26px;}
-.cndns-right-box .box-border .sev-t span{font-size:42px;float:left;display:block;line-height:56px;margin-right:20px;color:#d3d3d3}
-.cndns-right-box .box-border .sev-t p{float:left;color:#ff6800;font-size:24px;line-height:28px;}
-.cndns-right-box .box-border .sev-t p i{display:block;font-size:14px;color:#aaa;}
-.cndns-right-box .box-border .sev-b{padding-top:15px;margin-top:15px;border-top:1px solid #e4e4e4}
-.cndns-right-box .box-border .sev-b h4{color:#666;font-size:14px;font-weight:normal;padding-bottom:15px;}
-.cndns-right-box .box-border .sev-b li{float:left;width:33.33333%}
-.cndns-right-box .box-border .sev-b li a{display:inline-block;color:#999;font-size:13px;padding-left:43px;background:url(images/q1.gif) no-repeat left 3px;line-height:36px;}
-.cndns-right-box .box-border .sev-b li a:hover{color:#ff6800}
-.meau-sev .cndns-right-box .box-border{width:430px;}
-.meau-contact .cndns-right-box .box-border{width:230px;}
-.cndns-right-meau:hover .cndns-right-box{display:block}
-.meau-code .cndns-right-box{top:inherit;bottom:-35px;}
-.meau-code .cndns-right-box .box-border{width:156px;text-align:center;border-top:1px solid #ccc;}
-.meau-code .cndns-right-box .box-border i{display:block;color:#f66e06;font-size:16px;line-height:16px;}
-.meau-code .cndns-right-box .box-border .arrow-right{top:inherit;bottom:50px;}
-.meau-sev .cndns-right-btn .demo-icon{display:none;}
-.meau-sev:hover .cndns-right-btn{background:#ff6800}
-.meau-zs .cndns-right-btn{background-color:#ff6800;color:#fff;margin-top:80px;border-color:#ff6800}
-.meau-zs .cndns-right-btn span{color:#fff}
-.meau-zs .cndns-right-btn p{color:#fff}
-    </style>
 {% endblock %}
 
-{% block title %}Flaskr{% endblock %}
+{% block title %}围棋信息发布中心{% endblock %}
 
 {% block navbar %}
     <div class="navbar navbar-inverse" role="navigation">
@@ -104,16 +28,24 @@
                 <ul class="nav navbar-nav">
                     <li><a href="/">首页</a></li>
                     <li><a href="#">赛事视频</a></li>
-                    <li><a href="#">围棋百科</a></li>
-                    <li><a href="#">新闻与公告</a></li>
+                    <li><a href="{{ url_for('baike.baike') }}">围棋百科</a></li>
+                    <li><a href="{{ url_for('new.new') }}">新闻与公告</a></li>
+                    <li><a href="#">联系我们</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
+                    <li><a href="javascript:setHome(this,window.location)">
+                        <span class="glyphicon glyphicon-home"></span> <b>设为首页</b></a>
+                    </li>
+                    <li><a href="javascript:addFavorite()">
+                        <span class="glyphicon glyphicon-heart"></span> <b>加入收藏</b></a>
+                    </li>
                     {% if current_user.is_authenticated %}
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 {{ current_user.username }}<b class="caret"></b>
                             </a>
                             <ul class="dropdown-menu">
+                                <li><a href="{{ url_for('main.blog') }}">博客</a></li>
                                 <li><a href="{{ url_for('auth.logout') }}">登出</a></li>
                             </ul>
                         </li>
@@ -135,13 +67,49 @@
             </div>
         {% endfor %}
         {% block page_content %}{% endblock %}
-
-
-
     </div>
 {% endblock %}
 
 {% block scripts %}
     {{ super() }}
+    <script type="text/javascript">
+    function addFavorite() {
+        var url = window.location;
+        var title = document.title;
+        var ua = navigator.userAgent.toLowerCase();
+        if (ua.indexOf("msie 8") > -1) {
+            external.AddToFavoritesBar(url, title, '');//IE8
+        } else {
+            try {
+                window.external.addFavorite(url, title);
+            } catch (e) {
+                try {
+                    window.sidebar.addPanel(title, url, "");//firefox
+                } catch (e) {
+                    alert("加入收藏失败，请使用Ctrl+D进行添加");
+                }
+            }
+        }
+    }
+    //设为首页 <a onclick="setHome(this,window.location)">设为首页</a>
+    function setHome(obj,vrl){
+        try{
+            obj.style.behavior='url(#default#homepage)';obj.setHomePage(vrl);
+        }
+        catch(e){
+            if(window.netscape) {
+                try {
+                    netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+                }
+                catch (e) {
+                    alert("此操作被浏览器拒绝！\n请在浏览器地址栏输入“about:config”并回车\n然后将 [signed.applets.codebase_principal_support]的值设置为'true',双击即可。");
+                }
+                var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefBranch);
+                prefs.setCharPref('browser.startup.homepage',vrl);
+            }
+        }
+    }
+
+</script>
     {{ moment.include_moment(local_js=url_for('static', filename='js/moment-with-locales.min.js')) }}
 {% endblock %}
