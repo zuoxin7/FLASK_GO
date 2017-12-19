@@ -7,8 +7,3 @@ from ..models import User, Post
 @new.route('/new', methods=['GET', 'POST'])
 def new():
     return render_template('new.html')
-
-@new.route('/push_new', methods=['GET', 'POST'])
-def push_new():
-
-    return render_template('push.html')

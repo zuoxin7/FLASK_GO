@@ -4,7 +4,7 @@
 {% block title %}围棋信息发布中心{% endblock %}
 {% block head %}
 {{ super() }}
-<link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel='stylesheet prefetch' href='http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css'>
 <link rel='stylesheet prefetch' href='http://puertokhalid.com/up/demos/puerto-Mega_Menu/css/normalize.css'>
 <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" media="screen" type="text/css" />
 {% endblock %}
@@ -17,67 +17,69 @@
 			<li>
 				<a href="">
 					<i class="fa fa-home"></i>
-					<strong>新闻棋谱</strong>
-					<small></small>
+					<strong>Home</strong>
+					<small>sweet home</small>
 				</a>
 			</li>
 			<li>
 				<a href="" class="active">
-					<i class="fa fa-bullhorn"></i>
-					<strong>网站公告</strong>
-					<small>升级维护</small>
+					<i class="fa fa-edit"></i>
+					<strong>About us</strong>
+					<small>sweet home</small>
 				</a>
 			</li>
 			<li>
 				<a href="">
-					<i class="fa fa-calendar"></i>
-					<strong>围棋日历</strong>
-					<small>围棋赛事日程</small>
+					<i class="fa fa-gift"></i>
+					<strong>Features</strong>
+					<small>sweet home</small>
 				</a>
 			</li>
 			<li>
 				<a href="">
 					<i class="fa fa-globe"></i>
-					<strong>围棋新闻</strong>
-					<small>各大赛事</small>
+					<strong>News</strong>
+					<small>sweet home</small>
 				</a>
-                <ul>
-					<li><a href="#"><i class="fa fa-trophy"></i>世界大赛</a></li>
-					<li><a href="#"><i class="fa fa-trophy"></i>中国赛事</a></li>
-					<li><a href="#"><i class="fa fa-trophy"></i>韩国赛事</a></li>
-					<li><a href="#"><i class="fa fa-trophy"></i>综合报道</a></li>
-                    <li><a href="#"><i class="fa fa-trophy"></i>业余赛事</a></li>
-                    <li><a href="#"><i class="fa fa-trophy"></i>日本棋战</a></li>
-				</ul>
 			</li>
 			<li>
 				<a href="">
 					<i class="fa fa-comments-o"></i>
-					<strong>网站论坛</strong>
-					<small>比赛讨论</small>
+					<strong>Blog</strong>
+					<small>what they say</small>
+				</a>
+				<ul>
+					<li><a href="#"><i class="fa fa-globe"></i>Mission</a></li>
+					<li>
+						<a href="#"><i class="fa fa-group"></i>Our Team</a>
+						<ul>
+							<li><a href="#"><i class="fa fa-female"></i>Leyla Sparks</a></li>
+							<li>
+								<a href="#"><i class="fa fa-male"></i>Gleb Ismailov</a>
+								<ul>
+									<li><a href="#"><i class="fa fa-leaf"></i>About</a></li>
+									<li><a href="#"><i class="fa fa-tasks"></i>Skills</a></li>
+								</ul>
+							</li>
+							<li><a href="#"><i class="fa fa-female"></i>Viktoria Gibbers</a></li>
+						</ul>
+					</li>
+					<li><a href="#"><i class="fa fa-trophy"></i>Rewards</a></li>
+					<li><a href="#"><i class="fa fa-certificate"></i>Certificates</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="">
+					<i class="fa fa-picture-o"></i>
+					<strong>Portfolio</strong>
+					<small>sweet home</small>
 				</a>
 			</li>
 			<li>
 				<a href="">
-					<i class="fa fa-flag"></i>
-					<strong>围棋棋谱</strong>
-					<small>比赛复盘</small>
-				</a>
-                <ul>
-					<li><a href="#"><i class="fa fa-flag-checkered"></i>世界大赛</a></li>
-					<li><a href="#"><i class="fa fa-flag-checkered"></i>中国赛事</a></li>
-					<li><a href="#"><i class="fa fa-flag-checkered"></i>韩国赛事</a></li>
-					<li><a href="#"><i class="fa fa-flag-checkered"></i>综合报道</a></li>
-                    <li><a href="#"><i class="fa fa-flag-checkered"></i>业余赛事</a></li>
-                    <li><a href="#"><i class="fa fa-flag-checkered"></i>日本棋战</a></li>
-				    <li><a href="#"><i class="fa fa-flag-checkered"></i>女子比赛</a></li>
-                </ul>
-			</li>
-			<li>
-				<a href="">
-					<i class="fa fa-institution"></i>
-					<strong>围棋资料库</strong>
-					<small>棋手资料</small>
+					<i class="fa fa-envelope-o"></i>
+					<strong>Contacts</strong>
+					<small>drop a line</small>
 				</a>
 			</li>
 {#			<li class="float">#}
@@ -92,67 +94,5 @@
 		</ul>
 	</nav>
 </div>
-    <div style="text-align:center;clear:both"></div>
-
-    <div class="media">
-        <div class="media-left media-middle">
-            <a href="#">
-                <img class="media-object" style="height: 70px; width: 120px" src="{{ url_for('static', filename='images/1.jpg') }}" alt="...">
-            </a>
-        </div>
-        <div class="media-body">
-            <h4 class="media-heading"><a href="#">[女子围甲]女子围甲深圳分站指导棋活动 聂卫平王汝南指导棋迷</a></h4>
-
-        </div>
-    </div>
-    <hr>
-    <div class="media">
-        <div class="media-left media-middle">
-            <a href="#">
-                <img class="media-object" style="height: 70px; width: 120px" src="{{ url_for('static', filename='images/2.jpg') }}" alt="...">
-            </a>
-        </div>
-        <div class="media-body">
-            <h4 class="media-heading"><a href="#">[中韩顶级对抗赛]冠军争霸赛秀芝先胜一局 gaofeng奋力拼搏仍然落败</a></h4>
-            ...
-        </div>
-    </div>
-    <hr>
-    <div class="media">
-        <div class="media-left media-middle">
-            <a href="#">
-                <img class="media-object" style="height: 70px; width: 120px" src="{{ url_for('static', filename='images/3.jpg') }}" alt="...">
-            </a>
-        </div>
-        <div class="media-body">
-            <h4 class="media-heading"><a href="#">[女子围甲]女子围甲第18轮战罢 江苏队笑到最后创造“五连冠”</a></h4>
-            ...
-        </div>
-    </div>
-    <hr>
-    <div class="media">
-        <div class="media-left media-middle">
-            <a href="#">
-                <img class="media-object" style="height: 70px; width: 120px" src="{{ url_for('static', filename='images/4.jpg') }}" alt="...">
-            </a>
-        </div>
-        <div class="media-body">
-            <h4 class="media-heading"><a href="#">[其他]新奇生杯希望之星国际女子围棋邀请赛开幕式举行</a></h4>
-            ...
-        </div>
-    </div>
-    <hr>
-    <div class="media">
-        <div class="media-left media-middle">
-            <a href="#">
-                <img class="media-object" style="height: 70px; width: 120px" src="{{ url_for('static', filename='images/5.jpg') }}" alt="...">
-            </a>
-        </div>
-        <div class="media-body">
-            <h4 class="media-heading"><a href="#">[女子围甲]女子围甲年度赛点第17轮深圳打响 於之莹VS陆敏全</a></h4>
-            ...
-        </div>
-    </div>
-    <hr>
-
-{% endblock %}
+<div style="text-align:center;clear:both">
+	{% endblock %}
