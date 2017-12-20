@@ -31,4 +31,6 @@ def push_new():
 @new.route('/new_show/<newid>', methods=['GET', 'POST'])
 def new_show(newid):
     newsshow = New.select().where(New.id == newid)
-    return render_template('newshow.html', news=newsshow)
+    for n in newsshow:
+        time=str(n.timestamp)[:19]
+    return render_template('newshow.html', news=newsshow,timestamp=time)
