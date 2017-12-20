@@ -18,7 +18,7 @@ body {
 .containered {
     position: relative;
     margin: 0px auto;
-    padding: 50px 0;
+    padding: 0 0;
     clear: both;
 }
 @media only screen and (min-width: 1200px) {

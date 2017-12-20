@@ -26,7 +26,7 @@ def push_new():
             return redirect('./new')
         except:
             flash("发布失败")
-    return render_template('push.html', form=form)
+    return render_template('pushNew.html', form=form)
 
 @new.route('/new_show/<newid>', methods=['GET', 'POST'])
 def new_show(newid):

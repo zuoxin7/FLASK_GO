@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}围棋信息发布中心{% endblock %}
+
+
+{% block page_content %}
+    <div class="page-header">
+        <h1>发布新闻</h1>
+    </div>
+    <div style="padding-bottom: 100px">
+        {{ wtf.quick_form(form) }}
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+    <script src="//cdn.ckeditor.com/4.4.6/standard/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace( '_ckeditor' );
+    </script>
+{% endblock %}

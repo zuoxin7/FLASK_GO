@@ -99,3 +99,13 @@ class New(db.Model):
 
     class Meta:
         db_table = 'news'
+
+class Know(db.Model):
+    title = pw.CharField(null=True)
+    content = pw.TextField(null = True)
+    timestamp = pw.DateTimeField(index=True, default=datetime.utcnow)
+    author = pw.ForeignKeyField(User, related_name='Know', null=True)
+    log = pw.IntegerField(default=1)
+
+    class Meta:
+        db_table = 'knows'

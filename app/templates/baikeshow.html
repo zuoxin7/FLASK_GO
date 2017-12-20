@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}围棋信息发布中心{% endblock %}
+{% block head %}
+    {{ super() }}
+{% endblock %}
+
+
+{% block page_content %}
+    {% for baike in baikes %}
+        <div class="row" style="font-family: 'Open Sans','Helvetica Neue',Arial,'Hiragino Sans GB','Microsoft YaHei','WenQuanYi Micro Hei',sans-serif;">
+            <div class="col-md-3"></div>
+            <div class="col-md-6"><h1>{{ baike.title }} <br><small style="font-size: 0.5em;">发布于{{ timestamp }}</small></h1>
+                <br>
+                <div style="height:5vh"></div>
+                <div style="text-indent: 2em">{{ baike.content|safe }}</div>
+                <div style="height: 10vh;"></div>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+
+    {% endfor %}
+{% endblock %}
