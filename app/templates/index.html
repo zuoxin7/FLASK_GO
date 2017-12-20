@@ -7,7 +7,7 @@
     {{ super() }}
     <style type="text/css">
         html, body {width:100%;height:100%;} /*非常重要的样式让背景图片100%适应整个屏幕*/
-        .bg {display: table;width: 100%;height: 100%;padding: 100px 0;text-align: center;color: #fff;background: url(https://timgsa.baidu.com/timg?image&quality=80&size=b10000_10000&sec=1513603843&di=73f27f16a083d0d4dd616441327db0a6&src=http://imgsrc.baidu.com/forum/pic/item/8b13632762d0f7033798279a08fa513d2697c54a.jpg) no-repeat bottom center;background-color: #000;background-size: cover;}
+        .bg {display: table;width: 100%;height: 100%;padding: 100px 0;text-align: center;color: #fff;background: url(../static/images/background.jpg) no-repeat bottom center;background-color: #000;background-size: cover;}
         .my-navbar {padding:20px 0;transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;}
         .my-navbar a{background:transparent !important;color:white !important}
         .my-navbar a:hover {color:#45bcf9 !important;background:transparent;outline:0}
@@ -36,7 +36,7 @@
                     <li><a href="/">首页</a></li>
                     <li><a href="{{ url_for('video.video') }}">赛事视频</a></li>
                     <li><a href="{{ url_for('baike.baike') }}">围棋百科</a></li>
-                    <li><a href="{{ url_for('new.new') }}">新闻与公告</a></li>
+                    <li><a href="{{ url_for('new.news') }}">新闻与公告</a></li>
                     <li><a href="#">联系我们</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
@@ -52,6 +52,7 @@
                                 {{ current_user.username }}<b class="caret"></b>
                             </a>
                             <ul class="dropdown-menu navbar-inverse">
+                                <li><a href="{{ url_for('new.push_new') }}">发布新闻</a></li>
                                 <li><a href="{{ url_for('main.blog') }}">博客</a></li>
                                 <li><a href="{{ url_for('auth.logout') }}">登出</a></li>
                             </ul>

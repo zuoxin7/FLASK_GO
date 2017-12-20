@@ -6,7 +6,6 @@ import hashlib
 from flask import request
 from requests.exceptions import ConnectionError, HTTPError
 from utils.identicon import IdenticonSVG
-
 import peewee as pw
 
 from . import db
@@ -82,9 +81,21 @@ def load_user(user_id):
 
 
 class Post(db.Model):
-    body = pw.TextField(null=True)
+    title = pw.CharField(null=True)
+    content = pw.TextField(null=True)
     timestamp = pw.DateTimeField(index=True, default=datetime.utcnow)
     author = pw.ForeignKeyField(User, related_name='posts', null=True)
 
     class Meta:
         db_table = 'posts'
+
+
+class New(db.Model):
+    title = pw.CharField(null=True)
+    content = pw.TextField(null=True)
+    timestamp = pw.DateTimeField(index=True, default=datetime.utcnow)
+    author = pw.ForeignKeyField(User, related_name='news', null=True)
+    imagefile = pw.CharField(64, null=True)
+
+    class Meta:
+        db_table = 'news'
