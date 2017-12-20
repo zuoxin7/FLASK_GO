@@ -19,7 +19,7 @@ def push_new():
         new = New(title=form.title.data,
                   content=form.content.data,
                   author=current_user._get_current_object(),
-                  imagefile=secure_filename(form.image.data.filename))
+                  imagefile=filename)
         try:
             new.save()
             flash('你已经发布成功')

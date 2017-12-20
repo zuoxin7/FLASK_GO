@@ -2,10 +2,6 @@
 {% import "bootstrap/wtf.html" as wtf %}
 
 {% block title %}围棋信息发布中心{% endblock %}
-{% block head %}
-    {{ super() }}
-    <script src="//cdn.ckeditor.com/4.4.6/standard/ckeditor.js"></script>
-{% endblock %}
 
 
 {% block page_content %}
@@ -13,12 +9,14 @@
         <h1>发布新闻</h1>
     </div>
     <div>
-        <form method="post" enctype="multipart/form-data">
-            {{ form.csrf_token }}
-            {{ form.title(id="title", class="form-control", placeholder=form.title.label.text )}}
-            {{ form.image() }}
-            {{ form.content() }}
-            <button type="submit" class="btn btn-success">提交</button>
-        </form>
+        {{ wtf.quick_form(form) }}
     </div>
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+    <script src="//cdn.ckeditor.com/4.4.6/standard/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace( '_ckeditor' );
+    </script>
 {% endblock %}

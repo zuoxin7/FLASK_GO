@@ -9,5 +9,5 @@ class NewForm(FlaskForm):
     title = StringField(u"标题", validators=[Required()])
     image = FileField('请上传文章图片(jpg、png、jpeg)',
                       validators=[FileRequired(), FileAllowed(['jpg', 'png', 'jpeg'], '只允许上传图片!')])
-    content = TextAreaField(u"正文", validators=[Required()], render_kw={'class':'ckeditor'})
+    content = TextAreaField(u"正文", validators=[Required()], id="_ckeditor")
     submit = SubmitField(u"发布")
