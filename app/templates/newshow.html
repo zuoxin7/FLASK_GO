@@ -9,8 +9,8 @@
 
 {% block page_content %}
     {% for new in news %}
-        {{ new.title }}
+        <h1>{{ new.title }}</h1>
         <br>
-        {{ new.content }}
+        <div style="text-indent: 2em">{{ new.content|safe }}</div>
     {% endfor %}
 {% endblock %}
