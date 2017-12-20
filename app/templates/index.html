@@ -6,24 +6,73 @@
 {% block head %}
     {{ super() }}
     <style type="text/css">
-        li {list-style-type:none;}
-        html, body {width:100%;height:100%;} /*非常重要的样式让背景图片100%适应整个屏幕*/
-        .bg {display: table;width: 100%;height: 100%;padding: 100px 0;text-align: center;color: #fff;background: url(../static/images/background.jpg) no-repeat bottom center;background-color: #000;background-size: cover;}
-        .my-navbar {padding:20px 0;transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;}
-        .my-navbar a{background:transparent !important;color:white !important}
-        .my-navbar a:hover {color:#45bcf9 !important;background:transparent;outline:0}
-        .my-navbar a {transition: color 0.5s ease-in-out;}/*-webkit-transition ;-moz-transition*/
-        .top-nav {padding:0;background:#000;}
-        button.navbar-toggle {background-color:#fbfbfb;}/*整个背景都是transparent透明的，会看不到，所以再次覆盖一下*/
-        button.navbar-toggle > span.icon-bar {background-color:#dedede}
-        .duohang{width:200px;
+        li {
+            list-style-type: none;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+
+        /*非常重要的样式让背景图片100%适应整个屏幕*/
+        .bg {
+            display: table;
+            width: 100%;
+            height: 100%;
+            padding: 100px 0;
+            text-align: center;
+            color: #fff;
+            background: url(../static/images/background.jpg) no-repeat bottom center;
+            background-color: #000;
+            background-size: cover;
+        }
+
+        .my-navbar {
+            padding: 20px 0;
+            transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+        }
+
+        .my-navbar a {
+            background: transparent !important;
+            color: white !important
+        }
+
+        .my-navbar a:hover {
+            color: #45bcf9 !important;
+            background: transparent;
+            outline: 0
+        }
+
+        .my-navbar a {
+            transition: color 0.5s ease-in-out;
+        }
+
+        /*-webkit-transition ;-moz-transition*/
+        .top-nav {
+            padding: 0;
+            background: #000;
+        }
+
+        button.navbar-toggle {
+            background-color: #fbfbfb;
+        }
+
+        /*整个背景都是transparent透明的，会看不到，所以再次覆盖一下*/
+        button.navbar-toggle > span.icon-bar {
+            background-color: #dedede
+        }
+
+        .duohang {
+            width: 200px;
             height: 112px;
             overflow: hidden;
             text-overflow: ellipsis;
             display: -webkit-box;
             -webkit-line-clamp: 5;
             -webkit-box-orient: vertical;
-            font-size: 14px}
+            font-size: 14px
+        }
     </style>
 {% endblock %}
 
@@ -79,17 +128,18 @@
 {% endblock %}
 
 {% block page_content %}
-    <div class="page-header" >
+    <div class="page-header">
         <h3>赛事视频&nbsp;<span class="label label-default">New</span></h3>
     </div>
     <div style="text-align:center;clear:both"></div>
-    </div>
-    <div class="col-lg-12">
+
+    <div class="col-lg-16">
         <ul class="thumbnails">
             {% for shipin in shipins %}
                 <li class="col-sm-3">
                     <div class="thumbnail">
-                        <a href="{{ shipin.hyperlink }}"><img alt="300x200" style="height:258px" src="{{ url_for('static',filename='upload/'+shipin.imagefile) }}" /></a>
+                        <a href="{{ shipin.hyperlink }}"><img alt="图片异常" style="height:258px"
+                                                              src="{{ url_for('static',filename='upload/'+shipin.imagefile) }}"/></a>
                         <div class="caption">
                             <h3 style="margin: 0;text-align:center">
                                 {{ shipin.title }}
@@ -106,7 +156,8 @@
             <h3>围棋知识&nbsp;<span class="label label-default">New</span></h3>
             <hr>
             {% for zhishi in zhishis %}
-                <a href="{{ url_for('baike.baike_show', baikeid=zhishi.id) }}" class="list-group-item">{{ zhishi.title }}</a>
+                <a href="{{ url_for('baike.baike_show', baikeid=zhishi.id) }}"
+                   class="list-group-item">{{ zhishi.title }}</a>
             {% endfor %}
         </div>
 
@@ -115,38 +166,45 @@
             <h3>学棋百问&nbsp;<span class="label label-default">New</span></h3>
             <hr>
             {% for baiwen in baiwens %}
-                <a href="{{ url_for('baike.baike_show', baikeid=baiwen.id) }}" class="list-group-item">{{ baiwen.title }}</a>
+                <a href="{{ url_for('baike.baike_show', baikeid=baiwen.id) }}"
+                   class="list-group-item">{{ baiwen.title }}</a>
             {% endfor %}
         </div>
     </div>
+    <div style="height: 700px;"></div>
 
-    <div class="page-header" style="padding-left: 60px" >
-        <h3>新闻&nbsp;<span class="label label-default">New</span></h3>
-    </div>
-    <div class="container-fluid">
-        <div class="row-fluid">
-            <div class="col-lg-11">
-                <ul class="thumbnails">
-                    {% for new in news %}
-                        <li class="col-sm-3">
-                            <div class="thumbnail">
-                                <img alt="300x200" style="width: 300px;height:130px" src="{{ url_for('static',filename='upload/'+new.imagefile) }}" />
-                                <div class="caption">
-                                    <h3 style="margin: 0">
-                                        {{ new.title }}
-                                    </h3>
-                                    <div class="duohang">
-                                        {{ new.content|safe }}
-                                    </div>
-                                    <p>
-                                        <a class="btn btn-primary" href="{{ url_for('new.new_show', newid=new.id) }}">浏览</a> <a class="btn" href="#">分享</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-                    {% endfor %}
-                </ul>
-            </div></div></div>
+{#    <div>#}
+{#        <h3>新闻&nbsp;<span class="label label-default">New</span></h3>#}
+{#    </div>#}
+{#    <div class="container-fluid">#}
+{#        <div class="row-fluid">#}
+{#            <div class="col-lg-11">#}
+{#                <ul class="thumbnails">#}
+{#                    {% for new in news %}#}
+{#                        <li class="col-sm-3">#}
+{#                            <div class="thumbnail">#}
+{#                                <img alt="图片异常" style="width: 300px;height:130px"#}
+{#                                     src="{{ url_for('static',filename='upload/'+new.imagefile) }}"/>#}
+{#                                <div class="caption">#}
+{#                                    <h3 style="margin: 0">#}
+{#                                        {{ new.title }}#}
+{#                                    </h3>#}
+{#                                    <div class="duohang">#}
+{#                                        {{ new.content|safe }}#}
+{#                                    </div>#}
+{#                                    <p>#}
+{#                                        <a class="btn btn-primary"#}
+{#                                           href="{{ url_for('new.new_show', newid=new.id) }}">浏览</a> <a class="btn"#}
+{#                                                                                                        href="#">分享</a>#}
+{#                                    </p>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </li>#}
+{#                    {% endfor %}#}
+{#                </ul>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
 {% endblock %}
 
 {% block scripts %}
@@ -154,7 +212,10 @@
     <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
     <script>
         $(window).scroll(function () {
-            if ($(".navbar").offset().top > 50) {$(".navbar-fixed-top").addClass("top-nav");
-            }else {$(".navbar-fixed-top").removeClass("top-nav");}
+            if ($(".navbar").offset().top > 50) {
+                $(".navbar-fixed-top").addClass("top-nav");
+            } else {
+                $(".navbar-fixed-top").removeClass("top-nav");
+            }
         })</script>
 {% endblock %}
