@@ -13,11 +13,11 @@
         <h1>发布新闻</h1>
     </div>
     <div>
-        <form method="post" action="">
+        <form method="post" enctype="multipart/form-data">
             {{ form.csrf_token }}
             {{ form.title(id="title", class="form-control", placeholder=form.title.label.text )}}
-            {{ form.content(class="ckeditor") }}
             {{ form.image() }}
+            {{ form.content() }}
             <button type="submit" class="btn btn-success">提交</button>
         </form>
     </div>

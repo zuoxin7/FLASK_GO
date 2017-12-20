@@ -7,6 +7,8 @@
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel='stylesheet prefetch' href='http://puertokhalid.com/up/demos/puerto-Mega_Menu/css/normalize.css'>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" media="screen" type="text/css" />
+    <script type="text/javascript">
+    </script>
     <style>
     .duohang{width:200px;
     height: 100px;
@@ -114,6 +116,7 @@
                     <li class="col-sm-4">
                         <div class="thumbnail">
                             <img alt="300x200" style="width: 300px;height:130px" src="{{ url_for('static',filename='upload/'+new.imagefile) }}" />
+{#                            <img alt="300x200" style="width: 300px;height:130px" src="{{ url_for('static',filename='images/2.jpg') }}" />#}
                             <div class="caption">
                                 <h3>
                                     {{ new.title }}
@@ -122,7 +125,7 @@
                                     {{ new.content }}
                                 </div>
                                 <p>
-                                    <a class="btn btn-primary" href="#">浏览</a> <a class="btn" href="#">分享</a>
+                                    <a class="btn btn-primary" href="{{ url_for('new.new_show', newid=new.id) }}">浏览</a> <a class="btn" href="#">分享</a>
                                 </p>
                             </div>
                         </div>

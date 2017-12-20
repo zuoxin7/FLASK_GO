@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}围棋信息发布中心{% endblock %}
+{% block head %}
+    {{ super() }}
+{% endblock %}
+
+
+{% block page_content %}
+    {% for new in news %}
+        {{ new.title }}
+        <br>
+        {{ new.content }}
+    {% endfor %}
+{% endblock %}
