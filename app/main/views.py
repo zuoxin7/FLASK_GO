@@ -1,13 +1,17 @@
 from flask import render_template, session, redirect, url_for
 from flask_login import login_required, current_user
 from . import main
-from ..models import User, Post
+from ..models import User, Post, Video, Know, New
 from .forms import PostForm
 
 
 @main.route('/', methods=['GET', 'POST'])
 def index():
-    return render_template('index.html')
+    shipins = Video.select().where(Video.id <= 4)
+    zhishis = Know.select().where(Know.log == 1)
+    baiwens = Know.select().where(Know.log == 2)
+    news = New.select().where(New.id <= 4)
+    return render_template('index.html', shipins=shipins, zhishis=zhishis, baiwens=baiwens, news=news)
 
 @main.route('/message', methods=['GET', 'POST'])
 def message():

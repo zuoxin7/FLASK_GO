@@ -6,16 +6,42 @@
     <link href="http://vjs.zencdn.net/6.4.0/video-js.css" rel="stylesheet">
     <!-- If you'd like to support IE8 -->
     <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+    <style>
+    li {
+        list-style-type:none;
+    }
+    </style>
 {% endblock %}
 
 {% block page_content %}
-    <video id="my-video" class="video-js" controls preload="auto" width="240" height="240"
-     poster="MY_VIDEO_POSTER.jpg" data-setup="{}">
-    <source src="MY_VIDEO.mp4" type='video/mp4'>
-    <source src="MY_VIDEO.webm" type='video/webm'>
-    <p class="vjs-no-js">
-      To view this video please enable JavaScript, and consider upgrading to a web browser that
-      <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-    </p>
-  </video>
+{#    <video id="my-video" class="video-js" controls preload="auto" width="240" height="240"#}
+{#     poster="MY_VIDEO_POSTER.jpg" data-setup="{}">#}
+{#    <source src="MY_VIDEO.mp4" type='video/mp4'>#}
+{#    <source src="MY_VIDEO.webm" type='video/webm'>#}
+{#    <p class="vjs-no-js">#}
+{#      To view this video please enable JavaScript, and consider upgrading to a web browser that#}
+{#      <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>#}
+{#    </p>#}
+{#  </video>#}
+    <div class="page-header" >
+        <h1 style="text-align:center">比赛视频</h1>
+    </div>
+        <div style="text-align:center;clear:both"></div>
+            </div>
+            <div class="col-lg-12">
+                <ul class="thumbnails">
+                    {% for shipin in shipins %}
+                    <li class="col-sm-3">
+                        <div class="thumbnail">
+                            <a href="{{ shipin.hyperlink }}"><img alt="300x200" style="height:258px" src="{{ url_for('static',filename='upload/'+shipin.imagefile) }}" /></a>
+                            <div class="caption">
+                                <h3 style="margin: 0;text-align:center">
+                                    {{ shipin.title }}
+                                </h3>
+                            </div>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
 {% endblock %}

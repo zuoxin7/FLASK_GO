@@ -5,18 +5,14 @@
 
 
 {% block page_content %}
-    <div class="page-header">
-        <h1 style="text-align:center">发布百科知识</h1>
+    <div class="page-header" >
+        <h1 style="text-align:center">发布视频</h1>
     </div>
-    <div style="padding-bottom: 100px">
+    <div class="col-md-4" style="float: none; margin: 0 auto; margin-bottom: 80px">
         {{ wtf.quick_form(form) }}
     </div>
 {% endblock %}
 
 {% block scripts %}
     {{ super() }}
-    <script src="//cdn.ckeditor.com/4.4.6/standard/ckeditor.js"></script>
-    <script>
-        CKEDITOR.replace( '_ckeditor' );
-    </script>
 {% endblock %}

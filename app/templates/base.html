@@ -28,7 +28,7 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a href="/">首页</a></li>
-                    <li><a href="{{ url_for('video.video') }}">赛事视频</a></li>
+                    <li><a href="{{ url_for('video.videos') }}">赛事视频</a></li>
                     <li><a href="{{ url_for('baike.baikes') }}">围棋百科</a></li>
                     <li><a href="{{ url_for('new.news') }}">新闻与公告</a></li>
                     <li><a href="#">联系我们</a></li>
@@ -47,6 +47,7 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a href="{{ url_for('new.push_new') }}">发布新闻</a></li>
+                                <li><a href="{{ url_for('video.push_video') }}">发布视频</a></li>
                                 <li><a href="{{ url_for('baike.push_baike') }}">发布百科知识</a></li>
                                 <li><a href="{{ url_for('main.message') }}">论坛</a></li>
                                 <li><a href="{{ url_for('auth.logout') }}">登出</a></li>

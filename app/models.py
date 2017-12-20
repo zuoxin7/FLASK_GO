@@ -111,9 +111,11 @@ class Know(db.Model):
 
 class Video(db.Model):
     title = pw.CharField()
-    category = pw.CharField(default=1)
+    hyperlink = pw.CharField()
     imagefile = pw.CharField(64, null=True)
-    videofile = pw.CharField(64, null=True)
+    # category = pw.CharField(default=1)
+    # imagefile = pw.CharField(64, null=True)
+    # videofile = pw.CharField(64, null=True)
 
     class Meta:
         db_table = 'video'
