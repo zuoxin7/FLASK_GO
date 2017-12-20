@@ -81,8 +81,7 @@ def load_user(user_id):
 
 
 class Post(db.Model):
-    title = pw.CharField(null=True)
-    content = pw.TextField(null=True)
+    body = pw.TextField(null=True)
     timestamp = pw.DateTimeField(index=True, default=datetime.utcnow)
     author = pw.ForeignKeyField(User, related_name='posts', null=True)
 
@@ -109,3 +108,12 @@ class Know(db.Model):
 
     class Meta:
         db_table = 'knows'
+
+class Video(db.Model):
+    title = pw.CharField()
+    category = pw.CharField(default=1)
+    imagefile = pw.CharField(64, null=True)
+    videofile = pw.CharField(64, null=True)
+
+    class Meta:
+        db_table = 'video'

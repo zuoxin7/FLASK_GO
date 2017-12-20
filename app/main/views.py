@@ -9,14 +9,13 @@ from .forms import PostForm
 def index():
     return render_template('index.html')
 
-
-@main.route('/blog', methods=['GET', 'POST'])
-def blog():
+@main.route('/message', methods=['GET', 'POST'])
+def message():
     form = PostForm()
     if (current_user.is_authenticated and form.validate_on_submit()):
         post = Post(body=form.body.data,
                     author=current_user._get_current_object())
         post.save()
-        return redirect(url_for('.blog'))
+        return redirect(url_for('.message'))
     posts = Post.select().order_by(Post.timestamp.desc())
-    return render_template('blog.html', form=form, posts=posts)
+    return render_template('messagepush.html', form=form, posts=posts)
