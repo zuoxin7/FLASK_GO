@@ -4,75 +4,145 @@
 {% block title %}围棋信息发布中心{% endblock %}
 
 {% block page_content %}
-<div class="container-fluid">
-	<div class="row-fluid">
-		<div class="span12">
-			<div class="carousel slide" id="carousel-523249">
-				<ol class="carousel-indicators">
-					<li class="active" data-slide-to="0" data-target="#carousel-523249">
-					</li>
-					<li data-slide-to="1" data-target="#carousel-523249">
-					</li>
-					<li data-slide-to="2" data-target="#carousel-523249">
-					</li>
-				</ol>
-				<div class="carousel-inner">
-					<div class="item active">
-						<img style="width: 1600px;height: 500px" alt="" src="{{ url_for('static', filename='images/gudaiweiqi.jpg') }}" />
-						<div class="carousel-caption">
-							<h4>
-								起源
-							</h4>
-							<p>
-								围棋，起源于中国，中国古代称为“弈”，可以说是棋类之鼻祖，围棋至今已有4000多年的历史。
-							</p>
-						</div>
-					</div>
-					<div class="item">
-						<img style="width: 1600px;height: 500px" alt="" src="{{ url_for('static', filename='images/qiju2.jpg') }}" />
-						<div class="carousel-caption">
-							<h4>
-								棋具
-							</h4>
-							<p>
-								棋子分黑白两色。多为扁圆形（也有双面突起的应氏棋子）。棋子的数量以黑白子各180个为宜。棋子呈圆形。中国一般使用一面平、一面凸的棋子，日本则常用两面凸的棋子。
-							</p>
-						</div>
-					</div>
-					<div class="item">
-						<img style="width: 1600px;height: 500px" alt="" src="{{ url_for('static', filename='images/touxian.jpg') }}" />
-						<div class="carousel-caption">
-							<h4>
-								头衔
-							</h4>
-							<p>
-								中国的头衔战现有天元、名人和新人王。以前还举办过棋王和棋圣。其他几项比赛，冠军没有特殊的荣誉称呼，也就是没有头衔。
-							</p>
-						</div>
-					</div>
-				</div> <a data-slide="prev" href="#carousel-523249" class="left carousel-control">‹</a> <a data-slide="next" href="#carousel-523249" class="right carousel-control">›</a>
-			</div>
-		</div>
-	</div>
-</div>
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="carousel slide" id="carousel-523249">
+                    <ol class="carousel-indicators">
+                        <li class="active" data-slide-to="0" data-target="#carousel-523249">
+                        </li>
+                        <li data-slide-to="1" data-target="#carousel-523249">
+                        </li>
+                        <li data-slide-to="2" data-target="#carousel-523249">
+                        </li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img style="width: 1600px;height: 500px" alt=""
+                                 src="{{ url_for('static', filename='images/gudaiweiqi.jpg') }}"/>
+                            <div class="carousel-caption">
+                                <h4>
+                                    起源
+                                </h4>
+                                <p>
+                                    围棋，起源于中国，中国古代称为“弈”，可以说是棋类之鼻祖，围棋至今已有4000多年的历史。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img style="width: 1600px;height: 500px" alt=""
+                                 src="{{ url_for('static', filename='images/qiju2.jpg') }}"/>
+                            <div class="carousel-caption">
+                                <h4>
+                                    棋具
+                                </h4>
+                                <p>
+                                    棋子分黑白两色。多为扁圆形（也有双面突起的应氏棋子）。棋子的数量以黑白子各180个为宜。棋子呈圆形。中国一般使用一面平、一面凸的棋子，日本则常用两面凸的棋子。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img style="width: 1600px;height: 500px" alt=""
+                                 src="{{ url_for('static', filename='images/touxian.jpg') }}"/>
+                            <div class="carousel-caption">
+                                <h4>
+                                    头衔
+                                </h4>
+                                <p>
+                                    中国的头衔战现有天元、名人和新人王。以前还举办过棋王和棋圣。其他几项比赛，冠军没有特殊的荣誉称呼，也就是没有头衔。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <a data-slide="prev" href="#carousel-523249" class="left carousel-control">‹</a> <a
+                        data-slide="next" href="#carousel-523249" class="right carousel-control">›</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
-<div class="left col-sm-6" style="padding-bottom:200px">
-    <h3>&nbsp;<br></h3>
-    <h3>围棋知识&nbsp;<span class="label label-default">New</span></h3>
-    <hr>
-    {% for zhishi in zhishis %}
-    <a href="{{ url_for('baike.baike_show', baikeid=zhishi.id) }}" class="list-group-item">{{ zhishi.title }}</a>
-    {% endfor %}
-</div>
+    <div class="left col-sm-6" style="padding-bottom:100px">
+        <h3>&nbsp;<br></h3>
+        <h3>围棋知识&nbsp;<span class="label label-default">New</span></h3>
+        <hr>
+        {% for zhishi in zhishis %}
+            <a href="{{ url_for('baike.baike_show', baikeid=zhishi.id) }}"
+               class="list-group-item">{{ zhishi.title }}</a>
+        {% endfor %}
+    </div>
 
-<div class="right col-sm-6" style="padding-bottom:200px">
-    <h3>&nbsp;<br></h3>
-    <h3>学棋百问&nbsp;<span class="label label-default">New</span></h3>
-    <hr>
-    {% for baiwen in baiwens %}
-    <a href="{{ url_for('baike.baike_show', baikeid=baiwen.id) }}" class="list-group-item">{{ baiwen.title }}</a>
-    {% endfor %}
-</div>
+    <div class="right col-sm-6" style="padding-bottom:100px">
+        <h3>&nbsp;<br></h3>
+        <h3>学棋百问&nbsp;<span class="label label-default">New</span></h3>
+        <hr>
+        {% for baiwen in baiwens %}
+            <a href="{{ url_for('baike.baike_show', baikeid=baiwen.id) }}"
+               class="list-group-item">{{ baiwen.title }}</a>
+        {% endfor %}
+    </div>
+
+    <div class="col-lg-12" style="margin-bottom: 200px;">
+        <div class="container">
+            <h2>棋谱库</h2>
+            <p>实时自动更新</p>
+            <table class="table table-striped table-bordered table-hover table-condensed">
+                <thead>
+                <tr >
+                    <th style="text-align: center">时间</th>
+                    <th style="text-align: center">棋谱</th>
+                    <th style="text-align: center">黑方</th>
+                    <th style="text-align: center"> 白方</th>
+                    <th style="text-align: center">结果</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="text-center">
+                    <td>2017-11-03 	 	 	 	</td>
+                    <td><a href="http://game.onegreen.net/weiqi/HTML/176895.html">韩国职业业余联赛2轮</a></td>
+                    <td>申铉锡</td>
+                    <td>誓文馨原</td>
+                    <td>黑中盘胜</td>
+                </tr>
+                <tr class="text-center">
+                    <td>2017-11-03 	 	 	 	</td>
+                    <td><a href="http://game.onegreen.net/weiqi/HTML/176894.html">韩国职业业余联赛2轮</a> </td>
+                    <td>刘栽豪</td>
+                    <td>朱亨煜</td>
+                    <td>白中盘胜</td>
+                </tr>
+                <tr class="text-center">
+                    <td>2017-11-03 	 	 	 	</td>
+                    <td><a href="http://game.onegreen.net/weiqi/HTML/176893.html">韩国职业业余联赛2轮</a></td>
+                    <td>郑俊焕</td>
+                    <td>宋弘锡</td>
+                    <td>黑中盘胜</td>
+                </tr>
+                <tr class="text-center">
+                    <td>2017-11-03 	 	 	 	</td>
+                    <td><a href="http://game.onegreen.net/weiqi/HTML/176892.html">韩国职业业余联赛2轮</a></td>
+                    <td>朴常镇</td>
+                    <td>韩尚祚</td>
+                    <td>黑中盘胜</td>
+                </tr>
+                <tr class="text-center">
+                    <td>2017-11-03 	 	 	 	</td>
+                    <td><a href="http://game.onegreen.net/weiqi/HTML/176891.html">韩国职业业余联赛2轮</a></td>
+                    <td>朴时烈</td>
+                    <td>洪茂镇</td>
+                    <td>白中盘胜</td>
+                </tr>
+                <tr class="text-center">
+                    <td>2017-11-03 	 	 	 	</td>
+                    <td><a href="http://game.onegreen.net/weiqi/HTML/176890.html">韩国职业业余联赛2轮</a></td>
+                    <td>张炫圭</td>
+                    <td>朴硬根</td>
+                    <td>黑中盘胜</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
 
 {% endblock %}
