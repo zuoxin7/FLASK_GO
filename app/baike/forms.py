@@ -6,6 +6,6 @@ from flask_wtf.file import FileRequired, FileAllowed
 
 class KnowForm(FlaskForm):
     title = StringField(u"标题", validators=[Required()])
-    log = SelectField(u'类别', choices=[('1', '围棋知识'), ('2', '学棋百问'), ('3', '热点快讯'), ('4', '赛事简报')])
+    log = SelectField(u'类别', choices=[('1', '围棋知识'), ('2', '学棋百问')])
     content = TextAreaField(u"正文", validators=[Required()], id="_ckeditor")
     submit = SubmitField(u"发布")

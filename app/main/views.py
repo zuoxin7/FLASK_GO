@@ -8,8 +8,8 @@ from .forms import PostForm
 @main.route('/', methods=['GET', 'POST'])
 def index():
     shipins = Video.select().where(Video.id <= 4)
-    zhishis = Know.select().where(Know.log == 3)
-    baiwens = Know.select().where(Know.log == 4)
+    zhishis = Know.select().where(Know.log == 1)
+    baiwens = Know.select().where(Know.log == 2)
     news = New.select().where(New.id <= 4)
     return render_template('index.html', shipins=shipins, zhishis=zhishis, baiwens=baiwens, news=news)
 
