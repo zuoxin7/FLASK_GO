@@ -6,21 +6,24 @@
     {{ super() }}
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel='stylesheet prefetch' href='http://puertokhalid.com/up/demos/puerto-Mega_Menu/css/normalize.css'>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" media="screen" type="text/css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" media="screen" type="text/css"/>
     <script type="text/javascript">
     </script>
     <style>
-    li {
-        list-style-type:none;
-    }
-    .duohang{width:200px;
-    height: 112px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 5;
-    -webkit-box-orient: vertical;
-    font-size: 14px}
+        li {
+            list-style-type: none;
+        }
+
+        .duohang {
+            width: 200px;
+            height: 112px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 5;
+            -webkit-box-orient: vertical;
+            font-size: 14px
+        }
     </style>
 {% endblock %}
 
@@ -30,112 +33,159 @@
     <div class="container-fluid">
         <div class="row-fluid">
             <div class="col-lg-3">
-                    <div class="containered">
-        <nav>
-            <ul class="mcd-menu">
-                <li>
-                    <a href="">
-                        <i class="fa fa-home"></i>
-                        <strong>新闻棋谱</strong>
-                        <small></small>
-                    </a>
-                </li>
-                <li>
-                    <a href="" class="active">
-                        <i class="fa fa-bullhorn"></i>
-                        <strong>网站公告</strong>
-                        <small>升级维护</small>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <i class="fa fa-calendar"></i>
-                        <strong>围棋日历</strong>
-                        <small>围棋赛事日程</small>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <i class="fa fa-globe"></i>
-                        <strong>围棋新闻</strong>
-                        <small>各大赛事</small>
-                    </a>
-                    <ul>
-                        <li><a href="#"><i class="fa fa-trophy"></i>世界大赛</a></li>
-                        <li><a href="#"><i class="fa fa-trophy"></i>中国赛事</a></li>
-                        <li><a href="#"><i class="fa fa-trophy"></i>韩国赛事</a></li>
-                        <li><a href="#"><i class="fa fa-trophy"></i>综合报道</a></li>
-                        <li><a href="#"><i class="fa fa-trophy"></i>业余赛事</a></li>
-                        <li><a href="#"><i class="fa fa-trophy"></i>日本棋战</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="">
-                        <i class="fa fa-comments-o"></i>
-                        <strong>网站论坛</strong>
-                        <small>比赛讨论</small>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <i class="fa fa-flag"></i>
-                        <strong>围棋棋谱</strong>
-                        <small>比赛复盘</small>
-                    </a>
-                    <ul>
-                        <li><a href="#"><i class="fa fa-flag-checkered"></i>世界大赛</a></li>
-                        <li><a href="#"><i class="fa fa-flag-checkered"></i>中国赛事</a></li>
-                        <li><a href="#"><i class="fa fa-flag-checkered"></i>韩国赛事</a></li>
-                        <li><a href="#"><i class="fa fa-flag-checkered"></i>综合报道</a></li>
-                        <li><a href="#"><i class="fa fa-flag-checkered"></i>业余赛事</a></li>
-                        <li><a href="#"><i class="fa fa-flag-checkered"></i>日本棋战</a></li>
-                        <li><a href="#"><i class="fa fa-flag-checkered"></i>女子比赛</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="">
-                        <i class="fa fa-institution"></i>
-                        <strong>围棋资料库</strong>
-                        <small>棋手资料</small>
-                    </a>
-                </li>
-                {#			<li class="float">#}
-                {#				<a class="search">#}
-                {#					<input type="text" value="search ...">#}
-                {#					<button><i class="fa fa-search"></i></button>#}
-                {#				</a>#}
-                {#				<a href="" class="search-mobile">#}
-                {#					<i class="fa fa-search"></i>#}
-                {#				</a>#}
-                {#			</li>#}
-            </ul>
-        </nav>
-    </div>
-    <div style="text-align:center;clear:both"></div>
+                <div class="containered">
+                    <nav>
+                        <ul class="mcd-menu">
+                            <li>
+                                <a href="http://duiyi.sina.com.cn/qipu/new_gibo.asp" target="_blank">
+                                    <i class="fa fa-home"></i>
+                                    <strong>新闻棋谱</strong>
+                                    <small></small>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.eweiqi.com/index.php?m=content&c=index&a=lists&catid=41"
+                                   target="_blank">
+                                    <i class="fa fa-calendar"></i>
+                                    <strong>围棋日历</strong>
+                                    <small>围棋赛事日程</small>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="active">
+                                    <i class="fa fa-globe"></i>
+                                    <strong>围棋新闻</strong>
+                                    <small>各大赛事</small>
+                                </a>
+                                <ul>
+                                    <li><a href="http://www.eweiqi.com/index.php?m=content&c=index&a=lists&catid=26"
+                                           target="_blank"><i class="fa fa-trophy"></i>世界大赛</a></li>
+                                    <li><a href="http://www.eweiqi.com/index.php?m=content&c=index&a=lists&catid=27"
+                                           target="_blank"><i class="fa fa-trophy"></i>中国赛事</a></li>
+                                    <li><a href="http://www.eweiqi.com/index.php?m=content&c=index&a=lists&catid=28"
+                                           target="_blank"><i class="fa fa-trophy"></i>韩国赛事</a></li>
+                                    <li><a href="http://www.eweiqi.com/index.php?m=content&c=index&a=lists&catid=113"
+                                           target="_blank"><i class="fa fa-trophy"></i>综合报道</a></li>
+                                    <li><a href="http://www.eweiqi.com/index.php?m=content&c=index&a=lists&catid=204"
+                                           target="_blank"><i class="fa fa-trophy"></i>业余赛事</a></li>
+                                    <li><a href="http://www.eweiqi.com/index.php?m=content&c=index&a=lists&catid=254"
+                                           target="_blank"><i class="fa fa-trophy"></i>日本棋战</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="http://bbs.eweiqi.com/" target="_blank">
+                                    <i class="fa fa-comments-o"></i>
+                                    <strong>网站论坛</strong>
+                                    <small>比赛讨论</small>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <i class="fa fa-flag"></i>
+                                    <strong>围棋棋谱</strong>
+                                    <small>比赛复盘</small>
+                                </a>
+                                <ul>
+                                    <li><a href="http://www.eweiqi.com/index.php?m=content&c=index&a=lists&catid=31" target="_blank"><i class="fa fa-flag-checkered"></i>世界大赛</a></li>
+                                    <li><a href="http://www.eweiqi.com/index.php?m=content&c=index&a=lists&catid=32" target="_blank"><i class="fa fa-flag-checkered"></i>中国赛事</a></li>
+                                    <li><a href="http://www.eweiqi.com/index.php?m=content&c=index&a=lists&catid=73" target="_blank"><i class="fa fa-flag-checkered"></i>韩国赛事</a></li>
+                                    <li><a href="http://www.eweiqi.com/index.php?m=content&c=index&a=lists&catid=341" target="_blank"><i class="fa fa-flag-checkered"></i>日本棋战</a></li>
+                                    <li><a href="http://www.eweiqi.com/index.php?m=content&c=index&a=lists&catid=375" target="_blank"><i class="fa fa-flag-checkered"></i>女子比赛</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="http://www.eweiqi.com/index.php?m=content&c=index&a=lists&catid=45" target="_blank">
+                                    <i class="fa fa-institution"></i>
+                                    <strong>围棋资料库</strong>
+                                    <small>棋手资料</small>
+                                </a>
+                            </li>
+                            {#			<li class="float">#}
+                            {#				<a class="search">#}
+                            {#					<input type="text" value="search ...">#}
+                            {#					<button><i class="fa fa-search"></i></button>#}
+                            {#				</a>#}
+                            {#				<a href="" class="search-mobile">#}
+                            {#					<i class="fa fa-search"></i>#}
+                            {#				</a>#}
+                            {#			</li>#}
+                        </ul>
+                    </nav>
+                </div>
+                <div style="text-align:center;clear:both"></div>
             </div>
             <div class="col-lg-9">
                 <ul class="thumbnails">
                     {% for new in news %}
-                    <li class="col-sm-4">
-                        <div class="thumbnail">
-                            <img alt="300x200" style="width: 300px;height:130px" src="{{ url_for('static',filename='upload/'+new.imagefile) }}" />
-{#                            <img alt="300x200" style="width: 300px;height:130px" src="{{ url_for('static',filename='images/2.jpg') }}" />#}
-                            <div class="caption">
-                                <h3 style="margin: 0">
-                                    {{ new.title }}
-                                </h3>
-                                <div class="duohang">
-                                    {{ new.content|safe }}
+                        <li class="col-sm-4">
+                            <div class="thumbnail">
+                                <img alt="300x200" style="width: 300px;height:130px"
+                                     src="{{ url_for('static',filename='upload/'+new.imagefile) }}"/>
+                                {#                            <img alt="300x200" style="width: 300px;height:130px" src="{{ url_for('static',filename='images/2.jpg') }}" />#}
+                                <div class="caption">
+                                    <h3 style="margin: 0">
+                                        {{ new.title }}
+                                    </h3>
+                                    <div class="duohang">
+                                        {{ new.content|safe }}
+                                    </div>
+                                    <p>
+                                        <a class="btn btn-primary"
+                                           href="{{ url_for('new.new_show', newid=new.id) }}">浏览</a> <a class="btn"
+                                                                                                        href="#">分享</a>
+                                    </p>
                                 </div>
-                                <p>
-                                    <a class="btn btn-primary" href="{{ url_for('new.new_show', newid=new.id) }}">浏览</a> <a class="btn" href="#">分享</a>
-                                </p>
                             </div>
-                        </div>
-                    </li>
+                        </li>
                     {% endfor %}
                 </ul>
             </div>
         </div>
     </div>
+
+
+    <footer style="margin-left: -11vw;">
+        <div class="container" style="background-color: #c0c0c0;margin-top: 500px;width: 100vw;height: 170px;">
+            <div class="row">
+                <div class="col-sm-3">
+
+                    <hr>
+                    <a href="#" target="_blank">围棋发布平台</a>
+                    你可以在上面发布一切有关围棋的信息。
+                    <hr>
+                </div>
+
+                <div class="col-sm-2 links">
+                    <h4>友情链接</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="http://www.weiqiok.com"><img
+                                src="{{ url_for('static',filename='images/Logo04.gif') }}"
+                                style="height: 33px;width: 88px;"> </a></li>
+                        <li><a href="http://weiqi.tom.com"><img src="{{ url_for('static',filename='images/logo.jpg') }}"
+                                                                style="height: 33px;width: 88px;top: 2px;"></a></li>
+                        <li><a href="http://www.qipai.org.cn"><img
+                                src="{{ url_for('static',filename='images/3Vo677.png') }}"
+                                style="height: 33px;width: 88px;top: 2px;"></a></li>
+                    </ul>
+                </div>
+
+
+                <div class="col-sm-5 social">
+                    <h4>联系我们</h4>
+                    <ul class="list-unstyled">
+                        <li>客服热线：18866666666</li>
+                        <li>微信：18866666666</li>
+                        <li>QQ：18866666666</li>
+                    </ul>
+                </div>
+
+                <div class="col-sm-2">
+                    <h5>扫描二维码</h5>
+                    <img src="{{ url_for('static', filename='images/er.png') }}" style="height: 110px;width: 110px;">
+                </div>
+            </div>
+        </div>
+        <div class="copyright text-center">Copyright 2017. All Rights Reserved.
+        </div>
+    </footer>
 {% endblock %}

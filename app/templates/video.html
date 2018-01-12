@@ -7,41 +7,88 @@
     <!-- If you'd like to support IE8 -->
     <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
     <style>
-    li {
-        list-style-type:none;
-    }
+        li {
+            list-style-type: none;
+        }
     </style>
 {% endblock %}
 
 {% block page_content %}
-{#    <video id="my-video" class="video-js" controls preload="auto" width="240" height="240"#}
-{#     poster="MY_VIDEO_POSTER.jpg" data-setup="{}">#}
-{#    <source src="MY_VIDEO.mp4" type='video/mp4'>#}
-{#    <source src="MY_VIDEO.webm" type='video/webm'>#}
-{#    <p class="vjs-no-js">#}
-{#      To view this video please enable JavaScript, and consider upgrading to a web browser that#}
-{#      <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>#}
-{#    </p>#}
-{#  </video>#}
-    <div class="page-header" >
+    {#    <video id="my-video" class="video-js" controls preload="auto" width="240" height="240"#}
+    {#     poster="MY_VIDEO_POSTER.jpg" data-setup="{}">#}
+    {#    <source src="MY_VIDEO.mp4" type='video/mp4'>#}
+    {#    <source src="MY_VIDEO.webm" type='video/webm'>#}
+    {#    <p class="vjs-no-js">#}
+    {#      To view this video please enable JavaScript, and consider upgrading to a web browser that#}
+    {#      <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>#}
+    {#    </p>#}
+    {#  </video>#}
+    <div class="page-header">
         <h1 style="text-align:center">比赛视频</h1>
     </div>
-        <div style="text-align:center;clear:both"></div>
-            </div>
-            <div class="col-lg-12">
-                <ul class="thumbnails">
-                    {% for shipin in shipins %}
-                    <li class="col-sm-3">
-                        <div class="thumbnail">
-                            <a href="{{ shipin.hyperlink }}"><img alt="300x200" style="height:258px" src="{{ url_for('static',filename='upload/'+shipin.imagefile) }}" /></a>
-                            <div class="caption">
-                                <h3 style="margin: 0;text-align:center">
-                                    {{ shipin.title }}
-                                </h3>
-                            </div>
+    <div style="text-align:center;clear:both"></div>
+    </div>
+    <div class="col-lg-12">
+        <ul class="thumbnails">
+            {% for shipin in shipins %}
+                <li class="col-sm-3">
+                    <div class="thumbnail">
+                        <a href="{{ shipin.hyperlink }}"><img alt="300x200" style="height:258px"
+                                                              src="{{ url_for('static',filename='upload/'+shipin.imagefile) }}"/></a>
+                        <div class="caption">
+                            <h3 style="margin: 0;text-align:center">
+                                {{ shipin.title }}
+                            </h3>
                         </div>
-                    </li>
-                    {% endfor %}
-                </ul>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+
+    <footer>
+        <div class="container" style="background-color: #c0c0c0;margin-top: 700px;width: 100vw;">
+            <div class="row">
+                <div class="col-sm-3">
+
+                    <hr>
+                    <a href="#" target="_blank">围棋发布平台</a>
+                    你可以在上面发布一切有关围棋的信息。
+                    <hr>
+                </div>
+
+                <div class="col-sm-2 links">
+                    <h4>友情链接</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="http://www.weiqiok.com"><img
+                                src="{{ url_for('static',filename='images/Logo04.gif') }}"
+                                style="height: 33px;width: 88px;"> </a></li>
+                        <li><a href="http://weiqi.tom.com"><img src="{{ url_for('static',filename='images/logo.jpg') }}"
+                                                                style="height: 33px;width: 88px;top: 2px;"></a></li>
+                        <li><a href="http://www.qipai.org.cn"><img
+                                src="{{ url_for('static',filename='images/3Vo677.png') }}"
+                                style="height: 33px;width: 88px;top: 2px;"></a></li>
+                    </ul>
+                </div>
+
+
+                <div class="col-sm-5 social">
+                    <h4>联系我们</h4>
+                    <ul class="list-unstyled">
+                        <li>客服热线：18866666666</li>
+                        <li>微信：18866666666</li>
+                        <li>QQ：18866666666</li>
+                    </ul>
+                </div>
+
+                <div class="col-sm-2">
+                    <h5>扫描二维码</h5>
+                    <img src="{{ url_for('static', filename='images/er.png') }}" style="height: 110px;width: 110px;">
+                </div>
             </div>
+        </div>
+        <div class="copyright text-center">Copyright 2017. All Rights Reserved.
+        </div>
+    </footer>
 {% endblock %}
